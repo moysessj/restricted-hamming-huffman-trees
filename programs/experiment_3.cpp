@@ -80,7 +80,7 @@ arvh heap[L+1], twoHHTRoot, htRoot;
 
 
 int main(){
-	double sumFreqsZipf = 0;
+	double zipfFreqSum = 0;
 	
 	buildPTriangle(pTriangle, N);
 		
@@ -93,11 +93,11 @@ int main(){
 	codeStCHT.clear();
 	codeStC.clear();
 	errorLeaves.clear();
-	sumFreqsZipf = 0;
+	zipfFreqSum = 0;
 
 	for(int i = 1; i<= l;i++){
 		freqs[i] = 1.0/i;
-		sumFreqsZipf += freqs[i];
+		zipfFreqSum += freqs[i];
 		heap[i]= newNode(i, NULL, NULL, freqs[i]);
 		sumFreqs[i]= sumFreqs[i-1]+freqs[i];
 	}
@@ -107,9 +107,9 @@ int main(){
 	
 	twoHHTRoot = create2HHT(l);
 
-	cost2hht = twoHHTCost(l)/sumFreqsZipf;
-	cost2hht2 = huffmanCost(twoHHTRoot,0)/sumFreqsZipf;
-	costHff = huffmanCost(htRoot,0)/sumFreqsZipf;
+	cost2hht = twoHHTCost(l)/zipfFreqSum;
+	cost2hht2 = huffmanCost(twoHHTRoot,0)/zipfFreqSum;
+	costHff = huffmanCost(htRoot,0)/zipfFreqSum;
 	
 	if((int) cost2hht*100000 != (int) cost2hht2*100000)
 		printf("Error -> l = %d; %lf !=  %lf ?> %.3lf\n",l, cost2hht, cost2hht2,costHff);
@@ -123,7 +123,7 @@ int main(){
 int findWorst2HHT(int lg){
 	int h2;
 	int worstL = 0;	
-	double sumFreqsZipf;
+	double zipfFreqSum;
 	double worstRatio = 0.0;
 	
 	printf("Processing 1 <= l <= %d that minimizes the 2-HHT error detection capabilities (for zipf distribuition)\n\n",lg);
@@ -131,12 +131,12 @@ int findWorst2HHT(int lg){
 		int minH1 = h(l), minH2=0, minL1=l, errorNodes = (1<<minH1)-minL1;
 		double minCost = 0;
 		double treeCost;
-		sumFreqsZipf = 0;
+		zipfFreqSum = 0;
 
 		for(int i = 1;i<= l;i++){
 			freqs[i] = 1.0/i;
 			sumFreqs[i]= sumFreqs[i-1]+freqs[i];
-			sumFreqsZipf +=freqs[i];
+			zipfFreqSum +=freqs[i];
 		}
 		for(int i = 1;i <= l; i++)
 			minCost += freqs[i];
