@@ -15,7 +15,9 @@ The relation among each source code and experiment is as follows:
 
 To run the programs in a Linux environment use:
 
-`g++ {file_name} -o {desired_exe_name} && ./{desired_exe_name}`
+```g++ 
+{file_name} -o {desired_exe_name} && ./{desired_exe_name}
+```
 
 For instance, to run `experiment_1.cpp`, one may use:
 
