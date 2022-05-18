@@ -5,7 +5,7 @@ year: 2022
 This program is part of the research paper titled "Restricted Hamming-Huffman trees"
 published in "RAIRO - Operations Research"
 
-Evaluation of the error detection capabilities in section "5.2. [2]-HHTs efficiency"
+Evaluation of the error detection capabilities described in section "5.2. [2]-HHTs efficiency"
 
 */
 

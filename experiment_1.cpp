@@ -5,7 +5,7 @@ year: 2022
 This program is part of the research paper titled "Restricted Hamming-Huffman trees"
 published in "RAIRO - Operations Research"
 
-Evaluation of the costs used in section "5.1. uniform [3]-HHT optimality hypothesis"
+Evaluation of the costs described  in section "5.1. uniform [3]-HHT optimality hypothesis"
 
 */
 
