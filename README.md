@@ -5,11 +5,11 @@ published in [RAIRO - Operations Research](https://www.rairo-ro.org/).
 
 The relation among each source code and experiment is as follows: 
 
-1.`experiment_1.cpp`: evaluation of the costs used in section `5.1. uniform [3]-HHT optimality hypothesis`.
+1.`experiment_1.cpp`: evaluation of the costs described  in section `5.1. uniform [3]-HHT optimality hypothesis`.
 
-2.`experiment_2.cpp`: evaluation of the costs in section `5.2. [2]-HHTs efficiency`.
+2.`experiment_2.cpp`: evaluation of the costs described in section `5.2. [2]-HHTs efficiency`.
 
-3.`experiment_3.cpp`: evaluation of the error detection capabilities in section `5.2. [2]-HHTs efficiency`.
+3.`experiment_3.cpp`: evaluation of the error detection capabilities described in section `5.2. [2]-HHTs efficiency`.
 
 # Running
 
