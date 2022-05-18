@@ -19,4 +19,4 @@ To run the programs in a Linux environment use:
 
 For instance, to run `experiment_1.cpp`, one may use:
 
-`g++ {experiment_1.cpp} -o {exp1} && ./{exp1}`
+`g++ experiment_1.cpp -o exp1 && ./exp1`
